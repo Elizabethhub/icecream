@@ -16,3 +16,124 @@
     max-width: none;
   }
 }
+// #container {
+//   border: 1px solid #ccc;
+//   margin: 0 auto;
+//   padding: 50px 0;
+//   max-width: 1170px;
+// }
+// /* Элемент сетки */
+// .element-item {
+//   border: 2px solid rgba(0, 0, 0, 0.35);
+//   margin-bottom: 15px;
+//   padding: 1px;
+//   width: 280px;
+//   border-radius: 4px;
+// }
+// /* /элемент сетки */
+// h1 {
+//   text-align: center;
+//   margin: 0 0 50px;
+// }
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(3, 42px);
+  grid-template-areas:
+    '..... ..... item4 item4 ..... item8 ......'
+    'item1 item2 item4 item4 item6 item9 item10'
+    '..... item3 item5 ..... item7 ..... ......';
+  grid-gap: 6px;
+}
+
+.gallery__item_number_1 {
+  grid-area: item1;
+}
+
+.gallery__item_number_2 {
+  grid-area: item2;
+  transform: translateY(-50%);
+}
+
+.gallery__item_number_3 {
+  grid-area: item3;
+  transform: translateY(-50%);
+}
+
+.gallery__item_number_4 {
+  grid-area: item4;
+}
+
+.gallery__item_number_5 {
+  grid-area: item5;
+}
+
+.gallery__item_number_6 {
+  grid-area: item6;
+  transform: translateY(-50%);
+}
+
+.gallery__item_number_7 {
+  grid-area: item7;
+  transform: translateY(-50%);
+}
+
+.gallery__item_number_8 {
+  grid-area: item8;
+  transform: translateY(30%);
+}
+
+.gallery__item_number_9 {
+  grid-area: item9;
+  transform: translateY(30%);
+}
+
+.gallery__item_number_10 {
+  grid-area: item10;
+}
+
+.gallery__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 730px;
+  }
+
+  .gallery {
+    grid-template-rows: repeat(3, 90px);
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .container {
+    width: 1080px;
+  }
+
+  .gallery {
+    grid-template-rows: repeat(3, 142px);
+  }
+}

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -59,6 +60,18 @@
       dots: true
     }
     )
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"
+    integrity="sha512-JRlcvSZAXT8+5SQQAvklXGJuxXTouyq8oIMaYERZQasB8SBDHZaUbeASsJWpk0UUrf89DP3/aefPPrlMR1h1yQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>
+    jQuery(document).ready(function ($) {
+      $('.elements-gride').masonry({
+        // options
+        itemSelector: '.element-item',
+        columnWidth: 300
+      });
+    });
   </script>
 
 </body>
